@@ -7,3 +7,7 @@ RUN yum install -y tzdata && \
     rm -rf /var/cache/yum
 
 COPY config/user.cnf /etc/mysql/my.cnf
+
+EXPOSE 3306
+
+CMD ["mysqld"]
